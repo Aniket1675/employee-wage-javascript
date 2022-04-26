@@ -38,3 +38,22 @@ console.log("Emp Wage : " + empWage);
 console.log("_______________________________________________");
 
 /******************************************************************************/
+
+//Uc-3 Function
+console.log("UC-3")
+function getWorkingHours(empCheck){
+    switch(empCheck){
+        case IS_FULL_TIME:
+            return FULL_TIME_HOURS;
+        case IS_PART_TIME:
+            return PART_TIME_HOURS;
+        default:
+            return 0;
+    }
+}
+ empHrs = getWorkingHours(empCheck);
+ empWage = empHrs * WAGE_PER_HOUR;
+console.log("Hours : " + empHrs + "  Emp Wage : " + empWage);
+console.log("_______________________________________________");
+
+/******************************************************************************/
