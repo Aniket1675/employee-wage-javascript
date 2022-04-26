@@ -248,4 +248,30 @@ console.log("___________________________________________________________________
 
 /***********************************************************************************/
 
+//UC-10 Ability to store the Day, Hours Worked and Wage Earned in a single object.
+console.log("UC-10")
+totalEmpHrs = 0;
+totalWorkingDays = 0;
+let empDailyHrsAndWageArr = new Array();
+while( totalEmpHrs <= MAX_HRS_IN_MONTH && totalWorkingDays < NUM_OF_WORKING_DAYS){
+    totalWorkingDays++;
+    empCheck = Math.floor(Math.random() * 10) % 3;
+    empHrs = getWorkingHours(empCheck);
+    totalEmpHrs += empHrs;
+    empDailyHrsAndWageArr.push(
+    {
+        dayNum:totalWorkingDays,
+        dailyHours:empHrs,
+        dailyWage:calcDailyWage(empHrs),
+        toString(){
+            return '\n Day' + this.dayNum + "=> Working Hours is " + this.dailyHours +
+                    ' And Wage Earned = ' + this.dailyWage
+        },
+    });
+}
+
+console.log("Showing  Daily Hours Worked and Wage Earned : " + empDailyHrsAndWageArr);
+console.log("__________________________________________________________________________________");
+
+/***********************************************************************************/
 
